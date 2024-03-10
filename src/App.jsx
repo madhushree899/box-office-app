@@ -5,9 +5,11 @@ import Starred from './pages/Starred';
 import MainLayout from './components/MainLayout';
 import Show from './pages/Show';
 
+const queryClient = new QueryClient();
+
 function App() {
   return (
-    <QueryClientProvider client={QueryClient}>
+    <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
           <Route element={<MainLayout />}>
